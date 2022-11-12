@@ -25,7 +25,8 @@ export const Tupple = ({ thumbnail,
         'px-3', 
         'py-2' ,
         'c-pointer',
-        'br-3'
+        'br-3',
+        'p-relative'
     )
     const badgeClass = classnames(
     'fs-small',

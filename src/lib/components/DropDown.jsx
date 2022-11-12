@@ -23,14 +23,14 @@ export const DropDown = ({
     }, 'br-3',
     'hmn-40',
     'wmn-40',
-    'p-fixed',
+    'p-absolute',
     'z-20',
     'r-0',
     'bg-white',
     className
 )
 const overlayClass = classnames({
-  'p-fixed h-100  w-100p t-0 l- z-10' : showModal
+  'p-fixed h-100  w-100p t-0 l-0 z-10' : showModal
 })
 
     const handleOutsideClick = () => {
@@ -39,7 +39,7 @@ const overlayClass = classnames({
     }
 
     return (
-      <div {...additionalProps} >
+      <div {...additionalProps} className="p-relative">
         <div onClick={handleOutsideClick} className={overlayClass}></div>
             <div onClick={toggleFn} style={{pointerEvents: showModal &&  'none'}}>{dropDownButton}</div>
             {showModal &&

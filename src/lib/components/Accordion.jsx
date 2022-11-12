@@ -16,16 +16,14 @@ export const Accordion = ({
 
   const modalClass = classnames({
     'h-0 ': !isOpen,
-    'h-40p': isOpen,
+    'auto': isOpen,
     }, 'br-3',
     't-all',
     'o-hidden',
-    'w-100p',
-    'p-fixed',
     'bg-white',
 )
 const overlayClass = classnames({
-  'p-fixed h-100  w-100p t-0 l- z-10' : isOpen
+  'p-fixed   w-100p t-0 l- z-10' : isOpen
 })
 
     return (

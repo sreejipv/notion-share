@@ -8,20 +8,16 @@ import { Tupple } from '../lib/components/Tupple';
 
 
 export const UserRole = ({ 
-        type, 
-        size, 
-        className,
-        transparent,
-        children,
-        additionalProps,
-        onClick }) => {
+  title,
+  subTitle
+       }) => {
     
     const btn = (
         <Tupple
         roundThum={true}
         thumbnail="https://i.pravatar.cc/80?u=ww"
-        title="Everyone at Teamout"
-        subTitle="2 people"
+        title={title}
+        subTitle={subTitle}
         actionItem={ <Button 
             className='c-grey-20'
             type="secondary"

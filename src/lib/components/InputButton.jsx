@@ -7,10 +7,8 @@ export const InputButton = ({
         type, 
         content, 
         buttonTitle,
-        actionResult,
         className,
         transparent,
-        children,
         additionalProps,
         onClick }) => {
     const buttonClass = classnames({
@@ -32,8 +30,8 @@ export const InputButton = ({
     }
 
     return (
-      <div className='flex'>
-        <input value={content} readonly className='w-100p'/>
+      <div className='flex px-3 flex-between'>
+        <input value={content} disabled className='bn by bl bc-grey-30 w-100p'/>
         <button className={buttonClass} 
         onClick={handleClick}
        {...additionalProps}>

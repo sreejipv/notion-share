@@ -17,6 +17,12 @@ $display: (
     .d-#{$display} {
       display: $value
     }
+
+    .hover\:d-#{$display}{
+      &:hover {
+        display: $value
+      }
+    }
   }
   
 
