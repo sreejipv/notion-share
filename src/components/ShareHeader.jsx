@@ -17,8 +17,8 @@ export const ShareHeader = ({
 
     return (
 
-        <div>
-            <Button type="secondary" transparent={false}>
+        <div className='flex'>
+            <Button type="secondary" className="w-100p mr-2 ta-left" transparent={false}>
                 Add emails or people
             </Button>
             <Button type="primary" transparent={false}>

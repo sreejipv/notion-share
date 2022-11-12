@@ -13,7 +13,7 @@ export const Button = ({ type,
     const buttonClass = classnames({
         'bg-blue c-white  fw-600 bc-grey-30' : type === 'primary' && !transparent,
         'hover:bg-blue' : type === 'primary' && !transparent,
-        'bg-transparent bc-transparent hover:bg-blue' : type === 'secondary' && transparent,
+        'bg-transparent bc-transparent hover:bg-grey-10' : type === 'secondary' && transparent,
         'bg-grey-10 bc-grey-30  c-grey-80' : type === 'secondary' && !transparent,
     },
     'c-pointer',
@@ -32,7 +32,9 @@ export const Button = ({ type,
       <button className={buttonClass} 
        onClick={handleClick}
        {...additionalProps}>
-           {children}
+           <div className='flex flex-middle'>
+            {children}
+           </div>
       </button>
   
     );

@@ -1,0 +1,34 @@
+
+ $property: (
+    'bg' : background-color,
+    'color': color,
+    'border': border,
+    'box-shadow': box-shadow,
+    'elevation': box-shadow // alias for box-shadow
+  );
+
+  $duration: (
+    '100': 100ms,
+    '200': 200ms,
+    '300': 300ms,
+    '500': 500ms,
+    '1000': 1000
+  );
+
+@each $object, $value in $property {
+    .tp-#{$object} {
+      transition-property: $value
+    }
+  }
+  // ------------------------------
+// Transition Duration
+// ------------------------------
+@each $object, $value in $duration {
+    .td-#{$object} {
+      transition-duration: $value
+    }
+  }
+
+.t-all{
+  transition : all 0.4s ease;
+}  

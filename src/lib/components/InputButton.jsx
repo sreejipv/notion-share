@@ -3,22 +3,27 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types'
 
 
-export const Button = ({ type, 
-        size, 
+export const InputButton = ({ 
+        type, 
+        content, 
+        buttonTitle,
+        actionResult,
         className,
         transparent,
         children,
         additionalProps,
         onClick }) => {
     const buttonClass = classnames({
-        'bg-blue' : type === 'primary' && !transparent,
+        'bg-blue c-white  fw-600 bc-grey-30' : type === 'primary' && !transparent,
         'hover:bg-blue' : type === 'primary' && !transparent,
-        'bg-transparent bc-transparent hover:bg-grey-10' : type === 'secondary' && transparent,
-        'bg-grey-10 bc-transparent c-grey-80' : type === 'secondary' && !transparent,
+        'bg-transparent bc-grey-30  hover:bg-grey-10' : type === 'secondary' && transparent,
+        'bg-grey-10 bc-grey-30  c-grey-80' : type === 'secondary' && !transparent,
     },
     'c-pointer',
     'br-3',
     'fs-3',
+    'py-1',
+    'px-3',
     className)
 
     const handleClick = (event) =>{
@@ -27,16 +32,21 @@ export const Button = ({ type,
     }
 
     return (
-      <button className={buttonClass} 
-       onClick={handleClick}
+      <div className='flex'>
+        <input value={content} readonly className='w-100p'/>
+        <button className={buttonClass} 
+        onClick={handleClick}
        {...additionalProps}>
-           {children}
+           <div className='flex flex-middle wmn-120 flex-center'>
+            {buttonTitle}
+           </div>
       </button>
+      </div>
   
     );
   };
   
-  Button.propTypes = {
+  InputButton.propTypes = {
     /**
      * Additional classes to be added to the component
      */
@@ -59,7 +69,7 @@ export const Button = ({ type,
     onClick: PropTypes.func,
   };
   
-  Button.defaultProps = {
+  InputButton.defaultProps = {
     className: '',
     type: 'primary',
     size: 'md',

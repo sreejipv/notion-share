@@ -20,15 +20,17 @@ export const DropDown = ({
 
   const modalClass = classnames({
     'elevation-6' : shadow,
-    }, 'br-6',
+    }, 'br-3',
     'hmn-40',
     'wmn-40',
     'p-fixed',
     'z-20',
+    'r-0',
+    'bg-white',
     className
 )
 const overlayClass = classnames({
-  'p-fixed h-100  w-100p t-0 l-0 z-10' : showModal
+  'p-fixed h-100  w-100p t-0 l- z-10' : showModal
 })
 
     const handleOutsideClick = () => {

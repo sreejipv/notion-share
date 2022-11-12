@@ -1,13 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
 import "./styles/index.scss";
-import { Button } from './components/Button';
+import "./styles/custom.scss";
+import { Button } from './lib/components/Button';
 import { useState } from 'react';
-import { Modal } from './components/Modal';
-import { DropDown } from './components/DropDown';
+import { Modal } from './lib/components/Modal';
+import { DropDown } from './lib/components/DropDown';
 import { ShareHeader } from './components/ShareHeader';
 import { Tupple } from './lib/components/Tupple';
-
+import {ReactComponent as ArrowDown} from './assets/svg/arrowDown.svg'
+import { UserRole } from './components/UserRole';
+import { WebShare } from './components/WebShare';
 
 function App() {
   // const button = (<Button 
@@ -36,18 +39,13 @@ function App() {
      <div className="hmn-100 w-100p flex flex-column "> 
        <div>
         <ShareHeader/>
-        <Tupple
-          roundThum={true}
-          thumbnail="https://i.pravatar.cc/80"
-          title="Everyone at Teamout"
-          subTitle="2 people"
-          actionItem={
-            <Button type="secondary"
-            transparent={true}>
-              Full access
-            </Button>
-          }
-        />
+        <UserRole/>
+        <UserRole/>
+        <UserRole/>
+        <WebShare/>
+
+        {/* <UserRole/> */}
+       
           {/* <DropDown
             dropDownButton ={button} 
             content= {content}
