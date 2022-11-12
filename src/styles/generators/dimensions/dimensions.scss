@@ -1,0 +1,63 @@
+// ------------------------------
+// Widths
+// ------------------------------
+
+
+  $width: (
+    '0': 0,
+    '10': 10px,
+    '20': 20px,
+    '30': 30px,
+    '32': 32px,
+    '40': 40px,
+    '10p': 10%,
+    '20p': 20%,
+    '30p': 30%,
+    '40p': 40%,
+    '50p': 50%,
+    '60p': 60%,
+    '70p': 70%,
+    '80p': 80%,
+    '90p': 90%,
+    '100p': 100%,
+    '200p': 200%,
+  );
+
+  $height: (
+    '0': 0,
+    '10': 10px,
+    '20': 20px,
+    '30': 30px,
+    '32': 32px,
+    '40': 40px,
+    '10p': 10%,
+    '20p': 20%,
+    '30p': 30%,
+    '40p': 40%,
+    '50p': 50%,
+    '60p': 60%,
+    '70p': 70%,
+    '80p': 80%,
+    '90p': 90%,
+    '100': 100vh,
+  );
+
+@each $width, $value in $width {
+    .w-#{$width} { width: $value }
+    .wmx-#{$width} { max-width: $value }
+    .wmn-#{$width} { min-width: $value }
+  }
+  
+  
+  // ------------------------------
+  // Height
+  // ------------------------------
+  // @each $height in $height {
+  //   .h-#{$height} { height: $height * 4px }
+  // }
+
+  @each $height, $value in $height {
+    .h-#{$height} { height: $value }
+    .hmx-#{$height} { max-height: $value }
+    .hmn-#{$height} { min-height: $value }
+  }

@@ -1,0 +1,41 @@
+
+   $strategies: (
+    'absolute': absolute,
+    'fixed': fixed,
+    'relative': relative,
+    'static': static,
+    'sticky': sticky
+  );
+
+
+  $coordinates: (
+    0,1,2,3,4,5,6,7,8,9,10,11,12
+  );
+
+// ------------------------------
+// Position
+// ------------------------------
+@each $position, $value in $strategies {
+    .p-#{$position} {
+      position: $value;
+    }
+  }
+
+
+  // ------------------------------
+// Coordinates
+// ------------------------------
+@each $coordinate in $coordinates {
+  .t-#{$coordinate} {
+    top: $coordinate * 4px;
+  }
+  .b-#{$coordinate} {
+    bottom: $coordinate * 4px;
+  }
+  .l-#{$coordinate} {
+    left: $coordinate * 4px;
+  }
+  .r-#{$coordinate} {
+    right: $coordinate * 4px;
+  }
+}
